@@ -3,10 +3,10 @@
     <head>
         <title>An interactive web page</title>
         <style>
-            #color_box {width: 200px; height: 200px;}
-            .gray {background: gray;}
-            .blue {background: rgb(67, 111, 255);}
-            .pink {background: pink;}
+            #color_box { width: 200px; height: 200px; }
+            .gray { background: gray; }
+            .blue { background: rgb(67, 111, 255); }
+            .pink { background: pink; }
         </style>
     </head>
     <body>
@@ -17,15 +17,18 @@
         <button id="blue_button">Blue</button>
         <div id="color_box" class="gray"></div>        
         <script>
-            const gray_button = document.getElementById("gray_button");
-            const blue_button = document.getElementById("blue_button");
             const color_box = document.getElementById("color_box");
+            
+            const gray_button = document.getElementById("gray_button");
             gray_button.onclick = function() {
                 color_box.className = "gray";
             };
+            
+            const blue_button = document.getElementById("blue_button");
             blue_button.onclick = function () {
                 color_box.className = "blue";
-            }
+            };
+
             /* TODO 1
              *
              * Add a third button (and the associated event handler)
@@ -39,9 +42,10 @@
         <button id="counter_button">This fabulous button</button>
         has been clicked <span id="countspan">0</span> times.
         <script>
-            var count=0;
-            const counter_button = document.getElementById("counter_button");
+            let count = 0;
             const countspan = document.getElementById("countspan");
+            
+            const counter_button = document.getElementById("counter_button");
             counter_button.onclick = function() {
                 /* TODO 2
                  *
